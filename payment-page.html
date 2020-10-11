@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Payment Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <style>
+    :root {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  --bg: #F7CD75;
+  --grey-100: #F2F2F2;
+  --grey-200: #B5B5B5;
+  --grey-300: #727373;
+  --grey-400: #333333;
+  --blue: #8797C6;
+  --green: #8ACE5E;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--grey-300);
+}
+
+.font-light	{ font-weight: 300 }
+.font-normal	{ font-weight: 400 }
+.font-medium	{ font-weight: 500 }
+.font-bold	{ font-weight: 700 }
+
+.heading {
+  font-size: 1.25rem;
+  color: var(--grey-400);
+}
+
+.title {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  margin: 0;
+  margin-bottom: 0.3rem;
+  color: var(--grey-200);
+  font-weight: 700;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 60%;
+  height: 65vh;
+  overflow: hidden;
+  border-radius: 4px;
+  display: flex;
+}
+
+.card__left {
+  min-width: 250px;
+  flex: 1;
+  background-color: var(--grey-100);
+  padding: 2.5rem 2.5rem 0 2.5rem;
+  overflow-y: auto;
+}
+
+.card__right {
+  flex: 2;
+  background-color: white;
+  padding: 2.5rem 2.5rem 0 2.5rem;
+  overflow-y: auto;
+}
+
+.card-img {
+  width: 4rem;
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.payment-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-card {
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid var(--grey-100);
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.p-card:nth-last-of-type(2) {
+  border: 2px solid var(--blue);
+}
+
+.p-card:hover {
+  border: 2px solid var(--blue);
+}
+
+.p-card p {
+  margin-bottom: 0;
+  margin-top: 0.2rem;
+}
+
+.stars {
+  margin-right: 0.35rem;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.8rem 0;
+  cursor: pointer;
+}
+
+.product:hover {
+  background: #8080800d;
+}
+
+.sign {
+  cursor: pointer;
+  border: 1px solid var(--grey-200);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.3rem;
+}
+
+.sign svg {
+  width: 20px;
+  height: 20px;
+}
+
+.divider {
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--grey-100);
+  margin-bottom: 0.5rem;
+}
+
+.superscript {
+  font-size: 0.7rem;
+  position: relative;
+  top: -6px;
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.validity {
+  font-size: 0.8rem;
+  color: var(--grey-300);
+  font-weight: 500;
+}
+
+.card-number {
+  font-size: 1rem;
+  color: var(--grey-300);
+  font-weight: 500;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    height: auto;
+    flex-direction: column;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card__left">
+        <div class="headline">
+          <p class="heading font-medium">My Wallets</p>
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="payment-cards">
+          <div class="p-card">
+            <!-- <img class="card-img" src="./img/visa.svg" alt="Visa"> -->
+            <p>Visa</p>
+            <p class="card-number"><span class="stars">****</span><span class="stars">****</span><span class="stars">****</span>9210</p>
+            <p class="validity">Valid thru: 12/25</p>
+          </div>
+          <div class="p-card">
+            <!-- <img class="card-img" src="./img/mastercard.svg" alt="MasterCard"> -->
+            <p>Master Card</p>
+            <p class="card-number"><span class="stars">****</span><span class="stars">****</span><span class="stars">****</span>2101</p>
+            <p class="validity">Valid thru: 06/21</p>
+          </div>
+          <div class="p-card">
+            <!-- <img class="card-img" src="./img/maestro.svg" alt="Maestro"> -->
+            <p>Maestro</p>
+            <p class="card-number"><span class="stars">****</span><span class="stars">****</span><span class="stars">****</span>8215</p>
+            <p class="validity">Valid thru: 05/28</p>
+          </div>
+        </div>
+      </div>
+      <div class="card__right">
+        <div class="headline">
+          <p class="heading font-medium">Current Balance</p>
+          <p class="heading font-bold">$729.<span class="superscript">00</span></p>
+        </div>
+        <div class="divider"></div>
+        <div class="product">
+          <div class="sign">
+            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </div>
+          <div class="product-detail">
+            <p class="title font-medium">Apple Iphone 10, 128 GB</p>
+            <p class="subtitle">Electronics #34587634 - 12 july 2015</p>
+          </div>
+          <div class="spacer"></div>
+          <p class="font-bold text-blue">$989.<span class="superscript">00</span></p>
+        </div>
+        <div class="product">
+          <div class="sign">
+            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </div>
+          <div class="product-detail">
+            <p class="title font-medium">Funds Added</p>
+            <p class="subtitle">Payment #34587634 - 11 july 2015</p>
+          </div>
+          <div class="spacer"></div>
+          <p class="font-bold text-green">$456.<span class="superscript">00</span></p>
+        </div>
+        <div class="product">
+          <div class="sign">
+            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </div>
+          <div class="product-detail">
+            <p class="title font-medium">Energy Bill</p>
+            <p class="subtitle">Other #34587634 - 09 july 2015</p>
+          </div>
+          <div class="spacer"></div>
+          <p class="font-bold text-blue">$76.<span class="superscript">00</span></p>
+        </div>
+        <div class="product">
+          <div class="sign">
+            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </div>
+          <div class="product-detail">
+            <p class="title font-medium">The Eye Cinema Ticket</p>
+            <p class="subtitle">Entertainment #34587634 - 12 july 2015</p>
+          </div>
+          <div class="spacer"></div>
+          <p class="font-bold text-green">$76.<span class="superscript">00</span></p>
+        </div>
+        <div class="product">
+          <div class="sign">
+            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </div>
+          <div class="product-detail">
+            <p class="title font-medium">Event Booked</p>
+            <p class="subtitle">Entertainment #34587634 - 10 july 2015</p>
+          </div>
+          <div class="spacer"></div>
+          <p class="font-bold text-blue">$987.<span class="superscript">00</span></p>
+        </div>
+        <div class="product">
+          <div class="sign">
+            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </div>
+          <div class="product-detail">
+            <p class="title font-medium">Apple Iphone 10, 128 GB</p>
+            <p class="subtitle">Electronics #34587634 - 12 july 2015</p>
+          </div>
+          <div class="spacer"></div>
+          <p class="font-bold text-blue">$234.<span class="superscript">00</span></p>
+        </div>
+        <div class="product">
+          <div class="sign">
+            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </div>
+          <div class="product-detail">
+            <p class="title font-medium">Apple Iphone 10, 128 GB</p>
+            <p class="subtitle">Electronics #34587634 - 12 july 2015</p>
+          </div>
+          <div class="spacer"></div>
+          <p class="font-bold text-blue">$989.<span class="superscript">00</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

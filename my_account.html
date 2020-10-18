@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+    <title>My Account</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Account</h1>
+        </div>
+        <div class="main">
+            <div class="sidebar">
+                <div class="my-details">
+                    <i class="fa fa-user-circle">
+                    </i> My Details
+                </div>
+            </div>
+
+            <div class="data">
+                <h1>My Details</h1>
+                <h4>Personal Information</h4>
+                <hr>
+                <div class="personal-details">
+                    <p>
+                        Assertively utilize adaptive customer <br> service for futur-proof plateforms. <br>
+                        Completely drive optimal markets.
+                    </p>
+                    <form action="#">
+
+                        <div class="grid-2">
+                            <div>
+                                <label for="fname">First Name</label>
+                                <input type="text" name="fname" required>
+                            </div>
+                            <div>
+                                <label for="sname">Second Name</label>
+                                <input type="text" name="sname" required>
+                            </div>
+
+                        </div>
+                        <label>Birth dAte</label>
+                        <br>
+                        <input type="date" id="birthday" name="birthday">
+                        <br>
+                        <label>Phone number</label>
+                        <br>
+                        <input type="text" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required class="input-phone">
+                        <br>
+                        <span>Keep 9-digit format with no spaces and dashes.</span>
+                        <br>
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+
+                <!-- Email Address -->
+                <h4>Email Address</h4>
+                <hr>
+                <div class="Email-address">
+                    <p>
+                        Assertively utilize adaptive customer <br> service for futur-proof plateforms. <br>
+                        Completely drive optimal markets.
+                    </p>
+                    <form action="#">
+                        <label for="email">Email-Address</label>
+                        <br>
+                        <input type="email" name="email" required>
+                        <br>
+                        <label for="password">Password</label>
+                        <br>
+                        <input type="password" name="password" required>
+                        <br>
+                        <input type="submit" value="Save">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

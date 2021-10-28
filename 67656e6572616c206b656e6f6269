@@ -1,0 +1,7 @@
+<a class="card" href="#">
+<div class="card__background"></div>
+<div class="card__content">
+    <p class="card__category">67656e6572616c206b656e6f6269</p>
+    <h3 class="card__heading">Maria Mich</h3>
+</div>
+</a>
